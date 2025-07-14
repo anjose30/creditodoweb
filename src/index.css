@@ -1,21 +1,36 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Harmonia Sans';
-  src: './assets/fonts/HarmoniaSansW01Bold.ttf';
+  font-family: "HarmoniaSansW01";
+  src: url("./assets/fonts/HarmoniaSansW01-Bold.woff2") format("woff2"),
+    url("./assets/fonts/HarmoniaSansW01-Bold.woff") format("woff"),
+    url("./assets/fonts/HarmoniaSansW01-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HarmoniaSansW01";
+  src: url("./assets/fonts/HarmoniaSansW01-Regular.woff2") format("woff2"),
+    url("./assets/fonts/HarmoniaSansW01-Regular.woff") format("woff"),
+    url("./assets/fonts/HarmoniaSansW01-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 body {
-  font-family: 'Harmonia Sans', sans-serif;
+  font-family: "Harmonia Sans", sans-serif;
 }
 
 @theme {
-    --color-credi-blue: #0D2348; 
-    --color-credi-orange: #F7931E;
-    --color-credi-neutro-white: #FFFFFF;
-    --color-credi-neutro-black: #1E1E1E;
-    --color-credi-gray-white: #E6E6E6;
-    --color-credi-gray-black: #3A3A3A;
+  --color-credi-blue: #0d2348;
+  --color-credi-orange: #f7931e;
+  --color-credi-neutro-white: #ffffff;
+  --color-credi-neutro-black: #1e1e1e;
+  --color-credi-gray-white: #e6e6e6;
+  --color-credi-gray-black: #3a3a3a;
+
+  --font-harmonia: "HarmoniaSansW01", sans-serif;
 }

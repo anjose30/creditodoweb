@@ -8,7 +8,7 @@ export default function Contact() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
       viewport={{ once: true, amount: 0.3 }}
-      className="flex flex-col items-center justify-center w-full min-h-screen px-6 py-16 bg-credi-neutro-white"
+      className="flex flex-col items-center justify-center w-full min-h-screen px-6 py-16 bg-gray-100"
     >
       <h3 className="mb-8 text-3xl font-semibold text-center">Contáctanos</h3>
 

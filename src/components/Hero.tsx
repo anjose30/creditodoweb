@@ -4,7 +4,6 @@ export default function Hero() {
   return (
     <motion.section className="relative h-screen pt-20 overflow-hidden bg-credi-neutro-white">
       <div className="flex items-center justify-between h-full px-6 mx-auto max-w-7xl">
-        {/* Texto */}
         <div className="z-10 max-w-2xl">
           <h2 className="mb-4 text-4xl font-bold">
             Soluciones financieras a tu alcance

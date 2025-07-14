@@ -38,7 +38,7 @@ export default function FAQSection() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
       viewport={{ once: true, amount: 0.3 }}
-      className="flex flex-col items-center justify-center w-full min-h-screen px-6 py-16 bg-gray-100"
+      className="flex flex-col items-center justify-center w-full min-h-screen px-6 py-16 bg-credi-neutro-white"
     >
       <h2 className="mb-6 text-4xl font-bold text-center">
         Preguntas Frecuentes

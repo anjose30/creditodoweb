@@ -60,7 +60,7 @@ export default function Business() {
 
   return (
     <section
-      className="w-full bg-gradient-to-br from-slate-50 to-gray-100 pt-16  overflow-hidden relative"
+      className="w-full bg-gradient-to-br bg-gray-100 pt-16  overflow-hidden relative"
       aria-label="Nuestros socios comerciales y aliados estratégicos"
     >
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
@@ -93,12 +93,12 @@ export default function Business() {
           <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-gray-100 to-transparent z-10 pointer-events-none"></div>
 
           <div
-            className="relative w-full overflow-hidden rounded-2xl  backdrop-blur-sm shadow-lg border border-white/20 pt-4"
+            className="relative w-full overflow-hidden rounded-2xl  backdrop-blur-sm shadow-lg border border-white/20 "
             ref={wrapperRef}
           >
             <motion.div
               ref={containerRef}
-              className="flex gap-20 w-max px-10"
+              className="flex md:gap-20 w-max px-10"
               animate={controls}
             >
               {[...logos, ...logos, ...logos].map((logo, index) => (

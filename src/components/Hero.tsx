@@ -40,14 +40,14 @@ export default function Hero() {
           viewport={{ once: true }}
         >
           <motion.h2
-            className="mb-6 text-4xl md:text-4xl font-bold text-gray-900 leading-tight"
+            className="mb-6 text-4xl md:text-5xl font-bold text-gray-900 leading-tight"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Soluciones financieras
-            <span className="text-credi-orange"> a tu alcance</span>
+            En CREDITODO tu movilidad es
+            <span className="text-credi-orange"> nuestra especialidad</span>
           </motion.h2>
 
           <motion.p
@@ -57,11 +57,8 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            En CrediTodo VS S.A.S te ayudamos a acceder a créditos rápidos,
-            seguros y adaptados a tus necesidades. Con nosotros,{" "}
-            <span className="font-semibold text-credi-orange">
-              ¡sí es posible!
-            </span>
+            Te damos el impulso que necesitas para acceder a 
+            <span className="font-semibold text-credi-orange"> ¡TODO!</span> lo que necesites en transporte.
           </motion.p>
 
           <motion.div

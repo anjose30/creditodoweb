@@ -114,6 +114,8 @@ export default function Statistics() {
       className="w-full bg-gray-100 py-16 px-4 overflow-hidden relative"
       aria-labelledby="statistics-heading"
     >
+
+
       <div className="relative z-10 max-w-6xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (

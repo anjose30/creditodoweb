@@ -1,23 +1,38 @@
 import { motion } from "framer-motion";
+import { Bike, Truck, RotateCcw, Zap } from "lucide-react";
 
-const services = [
+const financingOptions = [
   {
-    title: "Asesoría financiera personalizada",
+    title: "Motos",
     description:
-      "Recibe orientación profesional para estructurar tu crédito según tus metas.",
-    image: "./asesoria.avif",
+      "Financia la moto de tus sueños con planes flexibles y tasas competitivas.",
+    icon: Bike,
+    features: ["Variedad de marcas", "Hasta 60 meses", "Desde $1.500.000"],
   },
   {
-    title: "Solicitudes 100% digitales",
+    title: "Cargueros y Motocarros",
     description:
-      "Gestiona tu crédito desde cualquier lugar, de forma fácil y segura.",
-    image: "./solicitud.avif",
+      "Impulsa tu negocio con vehículos comerciales para transporte y carga.",
+    icon: Truck,
+    features: [
+      "Vehículos comerciales",
+      "Para emprendedores",
+      "Tasas preferenciales",
+    ],
   },
   {
-    title: "Soporte continuo",
+    title: "Vehículos Usados",
     description:
-      "Nuestro equipo te acompaña antes, durante y después del desembolso.",
-    image: "./soporte.avif",
+      "Adquiere la moto usada que necesitas con facilidades de pago.",
+    icon: RotateCcw,
+    features: ["Amplio catálogo", "Financiación rápida", "Garantía incluida"],
+  },
+  {
+    title: "Movilidad Eléctrica",
+    description:
+      "Patinetas, bicicletas eléctricas y más opciones de transporte sostenible.",
+    icon: Zap,
+    features: ["Eco-friendly", "Tecnología avanzada", "Mantenimiento mínimo"],
   },
 ];
 
@@ -60,15 +75,17 @@ export default function Features() {
       </div>
 
       <div className="relative z-10 max-w-6xl w-full text-center mb-16">
-        <motion.h3
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-4xl font-bold text-gray-900 mb-6"
+          className="flex items-center justify-center gap-3 mb-6"
         >
-          Nuestros Servicios
-        </motion.h3>
+          <h3 className="text-4xl md:text-4xl font-bold text-gray-900">
+            Qué financiamos
+          </h3>
+        </motion.div>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -76,40 +93,57 @@ export default function Features() {
           viewport={{ once: true }}
           className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed"
         >
-          Soluciones financieras diseñadas para ti. Explora cómo te ayudamos a
-          alcanzar tus metas.
+          Descubre todas las opciones de financiamiento que tenemos para ti.
+          Desde motos hasta movilidad eléctrica.
         </motion.p>
       </div>
 
-      <div className="relative z-10 grid md:grid-cols-3 gap-8 w-full max-w-6xl">
-        {services.map((service, idx) => (
+      <div className="relative z-10 grid md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-7xl">
+        {financingOptions.map((option, idx) => (
           <motion.div
             key={idx}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 + idx * 0.1 }}
             viewport={{ once: true }}
-            className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100"
+            className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-credi-orange/20"
           >
-            <div className="relative w-full h-48 overflow-hidden">
-              <motion.img
-                src={service.image}
-                alt={service.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                whileHover={{ scale: 1.1 }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div>
-            <div className="p-6 text-left">
+            <div className="p-6 text-center">
+              <motion.div
+                className="w-16 h-16 mx-auto mb-4 p-3 bg-gradient-to-r from-credi-orange/10 to-orange-500/10 rounded-2xl group-hover:from-credi-orange/20 group-hover:to-orange-500/20 transition-all duration-300"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+              >
+                <option.icon
+                  className="w-full h-full text-credi-orange group-hover:text-orange-500 transition-colors duration-300"
+                  strokeWidth={1.5}
+                />
+              </motion.div>
+
               <motion.h4 className="text-xl font-semibold text-gray-900 mb-3 transition-colors duration-300">
-                {service.title}
+                {option.title}
               </motion.h4>
-              <p className="text-gray-600 leading-relaxed">
-                {service.description}
+
+              <p className="text-gray-600 leading-relaxed mb-4 text-sm">
+                {option.description}
               </p>
 
+              <div className="space-y-2">
+                {option.features.map((feature, featureIdx) => (
+                  <motion.div
+                    key={featureIdx}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: 0.1 * featureIdx }}
+                    className="flex items-center justify-center gap-2 text-sm text-gray-500"
+                  >
+                    <span className="w-1.5 h-1.5 bg-credi-orange rounded-full"></span>
+                    {feature}
+                  </motion.div>
+                ))}
+              </div>
+
               <motion.div
-                className="mt-4 w-0 h-0.5 bg-gradient-to-r from-credi-orange to-orange-500 group-hover:w-full transition-all duration-500"
+                className="mt-4 w-0 h-0.5 bg-gradient-to-r from-credi-orange to-orange-500 group-hover:w-full transition-all duration-500 mx-auto"
                 initial={{ width: 0 }}
                 whileHover={{ width: "100%" }}
               />
@@ -117,6 +151,22 @@ export default function Features() {
           </motion.div>
         ))}
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.1, delay: 0.1 }}
+        viewport={{ once: true }}
+        className="mt-12 text-center"
+      >
+        <motion.button
+          whileHover={{ scale: 1.05, y: -2 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-gradient-to-r from-credi-orange to-orange-500 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+        >
+          Ver todas las opciones
+        </motion.button>
+      </motion.div>
 
       <motion.div
         className="absolute top-20 right-20 w-3 h-3 bg-credi-orange rounded-full opacity-40"

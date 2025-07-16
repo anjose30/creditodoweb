@@ -13,11 +13,6 @@ const logos = [
     company: "Figarante",
   },
   {
-    src: "/LOGO_HURGO_TRANSPORTE.webp",
-    alt: "Hurgo Transporte - Soluciones de transporte",
-    company: "Hurgo Transporte",
-  },
-  {
     src: "/LOGO_MERKFACIL.webp",
     alt: "MerkFácil - Plataforma de mercadeo",
     company: "MerkFácil",

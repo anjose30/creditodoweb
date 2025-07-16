@@ -34,7 +34,7 @@ export default function Header() {
     <>
       <motion.header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-          scrolled ? "bg-[#0D2348] shadow-lg" : "bg-transparent"
+          scrolled ? "bg-[#00234B] shadow-lg" : "bg-transparent"
         }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -52,7 +52,7 @@ export default function Header() {
               <span className="text-credi-orange">CREDI</span>
               <span
                 className={`transition-colors duration-300 ${
-                  scrolled ? "text-white" : "text-[#0D2348]"
+                  scrolled ? "text-white" : "text-credi-blue"
                 }`}
               >
                 TODO
@@ -88,7 +88,7 @@ export default function Header() {
           >
             <motion.svg
               className={`w-6 h-6 ${
-                scrolled ? "text-white" : "text-[#0D2348]"
+                scrolled ? "text-white" : "text-credi-blue"
               }`}
               fill="none"
               stroke="currentColor"
@@ -168,7 +168,7 @@ export default function Header() {
             />
 
             <motion.div
-              className="absolute top-16 left-0 right-0 bg-[#0D2348] shadow-2xl border-t border-credi-orange/20"
+              className="absolute top-16 left-0 right-0 bg-credi-blue shadow-2xl border-t border-credi-orange/20"
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -100, opacity: 0 }}

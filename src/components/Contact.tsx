@@ -188,7 +188,7 @@ export default function Contact() {
 
               <motion.button
                 type="submit"
-                className="bg-gradient-to-r from-credi-blue to-credi-orange text-white py-4 px-8 rounded-xl hover:from-credi-blue/90 hover:to-credi-orange/90 transition-all duration-200 hover:shadow-xl transform hover:scale-[1.02] font-semibold"
+                className="bg-gradient-to-r from-credi-blue/80 to-credi-orange text-white py-4 px-8 rounded-xl hover:from-credi-blue/90 hover:to-credi-orange/90 transition-all duration-200 hover:shadow-xl transform hover:scale-[1.02] font-semibold"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1 }}

@@ -51,8 +51,8 @@ export default function FAQSection() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="w-full px-16 space-y-4"
-      >
+        className="w-full px-2   md:px-16 space-y-4"
+      >   
         {faqs.map((faq, i) => (
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -39,7 +39,6 @@ const financingOptions = [
 export default function Features() {
   return (
     <section className="relative py-24 px-6 min-h-screen justify-center bg-gradient-to-br from-white to-gray-50 w-full flex flex-col items-center overflow-hidden">
-      {/* Background bubbles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           className="absolute top-1/3 left-1/4 w-48 h-48 bg-credi-orange/5 rounded-full blur-3xl"
@@ -58,7 +57,6 @@ export default function Features() {
         />
       </div>
 
-      {/* Title and description */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -75,7 +73,6 @@ export default function Features() {
         </p>
       </motion.div>
 
-      {/* Cards - Single entrance animation */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -120,7 +117,6 @@ export default function Features() {
         ))}
       </motion.div>
 
-      {/* Button */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

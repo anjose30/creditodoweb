@@ -9,6 +9,13 @@ const logos = [
   { src: "brands/LOGO_SUZUKI.webp", alt: "SUZUKI", company: "SUZUKI" },
   { src: "brands/LOGO_BAJAJ.webp", alt: "BAJAJ", company: "BAJAJ" },
   { src: "brands/LOGO_OFERO.webp", alt: "OFERO", company: "OFERO" },
+  { src: "brands/LOGO_AKT.webp", alt: "AKT", company: "AKT" },
+  { src: "brands/LOGO_HERO.webp", alt: "HERO", company: "HERO" },
+  { src: "brands/LOGO_HONDA.webp", alt: "HONDA", company: "HONDA" },
+  { src: "brands/LOGO_KAMEYO.webp", alt: "KAMEYO", company: "KAMEYO" },
+  { src: "brands/LOGO_SUZUKI.webp", alt: "SUZUKI", company: "SUZUKI" },
+  { src: "brands/LOGO_BAJAJ.webp", alt: "BAJAJ", company: "BAJAJ" },
+  { src: "brands/LOGO_OFERO.webp", alt: "OFERO", company: "OFERO" },
 ];
 
 export default function Brands() {
@@ -16,7 +23,6 @@ export default function Brands() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
-  // Optimizar el evento resize con debounce
   const checkMobile = useCallback(() => {
     setIsMobile(window.innerWidth < 768);
   }, []);
@@ -37,7 +43,6 @@ export default function Brands() {
     };
   }, [checkMobile]);
 
-  // Intersection Observer para solo animar cuando sea visible
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -53,7 +58,6 @@ export default function Brands() {
     return () => observer.disconnect();
   }, []);
 
-  // Agregar estilos para el scroll móvil
   useEffect(() => {
     if (isMobile) {
       const style = document.createElement("style");
@@ -110,9 +114,7 @@ export default function Brands() {
 
           <div className="relative w-full overflow-hidden rounded-2xl backdrop-blur-sm shadow-lg border border-white/20">
             {isMobile ? (
-              // Versión móvil con scroll horizontal
               <div className="flex overflow-x-auto scrollbar-hide px-6 gap-8 py-4">
-                {/* Triplicamos los logos para evitar espacios vacíos */}
                 {[...logos, ...logos, ...logos].map((logo, index) => (
                   <div
                     key={`${logo.company}-${index}`}
@@ -136,7 +138,6 @@ export default function Brands() {
                 ))}
               </div>
             ) : (
-              // Versión desktop con animación automática
               <motion.div
                 className="flex w-max px-10 gap-16"
                 animate={

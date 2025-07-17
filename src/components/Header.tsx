@@ -43,7 +43,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 sm:h-20 px-4 sm:px-6 mx-auto max-w-7xl">
           <div className="flex items-center gap-2 sm:gap-3">
             <img
-              src="/LOGO_CREDITODO.webp"
+              src="business/LOGO_CREDITODO.webp"
               alt="CrediTodo"
               className="h-8 w-8 sm:h-12 sm:w-12 filter drop-shadow-md"
             />

@@ -9,7 +9,7 @@ export default function Contact() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
       viewport={{ once: true, amount: 0.3 }}
-      className="relative w-full min-h-screen bg-gradient-to-br bg-gray-100 flex items-center justify-center px-6 py-24"
+      className="relative w-full min-h-screen bg-gradient-to-br bg-credi-neutro-white flex items-center justify-center px-6 py-24 overflow-hidden"
     >
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -67,7 +67,7 @@ export default function Contact() {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <img
-                src="/LOGO_CREDITODO.webp"
+                src="business/LOGO_CREDITODO.webp"
                 alt="Creditodo Logo"
                 className="w-full h-full object-contain filter drop-shadow-2xl"
               />

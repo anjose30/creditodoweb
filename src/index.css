@@ -34,3 +34,11 @@ body {
 
   --font-harmonia: "HarmoniaSansW01", sans-serif;
 }
+
+.will-change-transform {
+  will-change: transform, opacity;
+}
+
+.content-visibility-auto {
+  content-visibility: auto;
+}

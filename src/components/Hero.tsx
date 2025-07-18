@@ -24,7 +24,7 @@ export default function Hero() {
   if (!checked) return null; // No renderizar absolutamente nada hasta detectar tamaño
 
   return (
-    <motion.section className="relative h-screen pt-20 bg-gradient-to-br from-credi-neutro-white to-gray-50">
+    <motion.section className="relative h-screen md:pt-20 bg-gradient-to-br from-credi-neutro-white to-gray-50">
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
           className="absolute top-1/4 right-1/3 w-32 h-32 bg-credi-orange/10 rounded-full blur-xl"

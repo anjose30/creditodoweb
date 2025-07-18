@@ -83,7 +83,7 @@ export default function PaymentMethodsSection() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="bg-white rounded-xl border border-gray-100 hover:border-credi-orange/20 p-6 transition-all duration-300 shadow-lg hover:shadow-xl  group-hover:scale-105 h-48 flex flex-col text-credi-orange hover:text-orange-500">
+                <div className="bg-white rounded-xl border border-gray-100 hover:border-credi-orange/20 p-6 transition-all duration-300 shadow-lg hover:shadow-2xl h-48 flex flex-col text-credi-orange hover:text-orange-500">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center justify-center flex-1 min-h-[60px]">
                       <img

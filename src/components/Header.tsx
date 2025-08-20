@@ -76,7 +76,7 @@ export default function Header() {
                 animate={{ translateX: ["100%", "-100%"] }}
                 transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
               />
-              <span className="relative z-10">SOLICITA TU CRÉDITO</span>
+              <span className="relative z-10">Solicitar Crédito</span>
             </motion.button>
           </motion.div>
 

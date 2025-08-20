@@ -13,7 +13,7 @@ export default function App() {
     <div>
       <Header />
       <Hero />
-      <Statistics />
+      <Statistics /> 
       <Features />
       <Brands />
       <FAQSection />
